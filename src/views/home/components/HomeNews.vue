@@ -1,5 +1,6 @@
 <template>
   <div>
+    <my-card title="新闻资讯" icon="cc-menu-circle"></my-card>
     <list-card title="新闻资讯" icon="cc-menu-circle" :categories="newsCats">
       <template #list="{category}">
         <router-link

@@ -1,12 +1,7 @@
 <template>
   <div>
-    <div class="card mt-3 bg-white p-3">
-      <div class="card-header d-flex pb-3">
-        <i class="iconfont" :class="`icon-${icon}`"></i>
-        <div class="al-center flex-1 px-2 fz-xl">{{title}}</div>
-        <i class="iconfont icon-more"></i>
-      </div>
-      <div class="card-body pt-3">
+    <div class="card bg-white p-3">
+      <div class="card-body">
         <div class="nav jc-between">
           <div
             class="nav-item"
@@ -45,8 +40,6 @@
 export default {
   name: 'Card',
   props: {
-    title: { type: String, required: true },
-    icon: { type: String, required: true },
     categories: { type: Array, required: true }
   },
   data() {
@@ -57,12 +50,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../src/assets/sass/variable.scss';
 .card {
-  .card-header {
-    border-bottom: 1px solid $border-color;
-  }
   border-bottom: 1px solid $border-color;
 }
 </style>

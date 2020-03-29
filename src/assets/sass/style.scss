@@ -117,6 +117,12 @@ a {
   //map-get就是从上面预定义的里面选一个
   font-size: map-get($font-sizes, 'sm') * $base-font-size;
   padding: 0.2rem, 0.6rem;
+  &.btn-big {
+    font-size: map-get($font-sizes, 'lg') * $base-font-size;
+    padding: 1rem;
+    background-color: #fcfcfc;
+    border: 1px solid #eceef0;
+  }
 }
 
 .nav {

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <list-card title="英雄列表" icon="fenlei.dota" :categories="HeroList">
+    <my-card title="英雄列表" icon="fenlei.dota"></my-card>
+    <list-card :categories="HeroList">
       <template #list="{category}">
         <div class="d-flex flex-wrap" style="margin:0 -0.5rem">
           <router-link
@@ -38,6 +39,7 @@ export default {
     async getHeroList() {
       const res = await this.$http.get('/hero/list')
       this.HeroList = res.data
+      console.log(this.HeroList)
     }
   },
   created() {

@@ -6,9 +6,7 @@
         <div class="al-center flex-1 px-2 fz-xl">{{title}}</div>
         <i class="iconfont icon-more"></i>
       </div>
-      <div class="card-body pt-3">
-        <slot></slot>
-      </div>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -23,12 +21,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../../src/assets/sass/variable.scss';
-.card {
-  .card-header {
-    border-bottom: 1px solid $border-color;
-  }
+
+.card-header {
   border-bottom: 1px solid $border-color;
 }
 </style>
